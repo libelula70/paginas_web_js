@@ -27,7 +27,7 @@ function calcularArea (figura, datos) {
             resultado = datos.r*datos.r *Math.PI
             break;
         default:
-            break;
+        throw('Operación no permitida')
     }
     return resultado.toFixed(2)
 }
@@ -46,5 +46,15 @@ function probar() {
     console.log(calcularArea(figura, datos))
 }
 
-probar ()
 
+
+try {
+    let figura='pentagono'
+    let datos={}
+    console.log(calcularArea(figura,datos))
+}catch(error) {
+    console.log(error)
+}
+
+
+probar ()
