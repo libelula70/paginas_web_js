@@ -2,4 +2,33 @@ let oDatos={ }
 
 let aDatos=[1,2]
 
-aDatos
+/* console.log(aDatos.length)
+aDatos[10]=4
+console.log(aDatos)
+console.log(typeof aDatos[7]) */
+
+//console.log(aDatos + [3, 4])
+//console.log(aDatos.concat ([3, 4]))
+
+/* let aNombres=['Pepe', 'Luis', 'Arancha', 'Rosa', 'Maria']
+aNombresOriginal=aNombres
+console.log(aNombresOriginal)
+aNombres.sort()
+console.log(aNombres) */
+
+
+/* let aNombres=['Pepe', 'Luis', 'Arancha', 'Rosa', 'Maria']
+aNombresOriginal=aNombres.join('|').split('|')
+aNombres.sort()
+console.log(aNombres)
+console.log(aNombresOriginal)
+ */
+
+aNombres=['Pepe', 'Luis', 'Arancha', 'Rosa', 'Maria']
+console.log(aNombres.slice(1,4))
+console.log(aNombres)
+
+let aElegidos = aNombres.splice(0)
+
+console.log(aElegidos)
+console.log(aNombres)
