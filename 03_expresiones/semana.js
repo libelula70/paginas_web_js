@@ -12,31 +12,28 @@ function despertador (dia) {
     if (dia=='L') {
         hora= '7:00'
         dia='lunes'
-    }
-    else if (dia=='M') {
+    } else if (dia=='M') {
         hora= '7:00'
         dia='martes'
-    }
-    else if (dia=='X') {
+    } else if (dia=='X') {
         hora= '7:00'
         dia='miércoles'
-    }
-    else if (dia=='J') {
+    } else if (dia=='J') {
         hora= '7:00'
         dia='jueves'
-    }
-    else if (dia=='V') {
+    } else if (dia=='V') {
         hora= '7:00'
         dia='viernes'
-    }
-    else if (dia=='S') {
+    } else if (dia=='S') {
         hora= '12:00'
         dia='sábado'
-    }else if (dia=='D') {
+    } else if (dia=='D') {
         hora= '12:00'
         dia='domingo'
+    } else {
+        'Este valor no es correcto'
     }
-        hora='7:00'
+       
 
     return `${hora}, comienza el ${dia}`;
 }
@@ -50,13 +47,15 @@ function probar () {
     console.log(`Si tu día es ${dia}`, despertador (dia)) // 7:00
     dia='D'
     console.log(`Si tu día es ${dia}`, despertador (dia)) // 7:00
+    dia='Y'
+    console.log(`Si tu día es ${dia}`, despertador (dia))
 }
 
 probar ()
 
 
-function despertador(dia) {
-    let hora = '12:00'
+function despertador2(dia) {
+    let hora = ''
     switch (dia) {
         case 'L':
             hora = '7:00'
@@ -90,20 +89,23 @@ function despertador(dia) {
             hora = '0:00'
             dia = "Error de día"
     }
-    return `${hora}, comenza el ${dia}`
+    return `${hora}, comienza el ${dia}`
 }
 
-function probar () {
+function probar2 () {
     let dia = 'L'
-    console.log(`Si tu dia es ${dia}`, despertador(dia)) // 7:00
+    console.log(`Si tu dia es ${dia}`, despertador2(dia)) // 7:00
     dia = 'M'
-    console.log(`Si tu dia es ${dia}`, despertador(dia)) // 7:00
+    console.log(`Si tu dia es ${dia}`, despertador2(dia)) // 7:00
     dia = 'S'
-    console.log(`Si tu dia es ${dia}`, despertador(dia)) // 12:00
+    console.log(`Si tu dia es ${dia}`, despertador2(dia)) // 12:00
     dia = 'D'
-    console.log(`Si tu dia es ${dia}`, despertador(dia)) // 12:00
+    console.log(`Si tu dia es ${dia}`, despertador2(dia)) // 12:00
     dia = 'Z'
-    console.log(`Si tu dia es ${dia}`, despertador(dia)) // 12:00
+    console.log(`Si tu dia es ${dia}`, despertador2(dia)) // 12:00
 }
 
-probar()
+probar2()
+
+
+
