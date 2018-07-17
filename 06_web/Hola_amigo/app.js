@@ -1,18 +1,32 @@
 function app () {
-    domNombre = document.querySelector("#nombre")
-    domBtnSaludar = document.querySelector("#btnSaludar")
-    domBtnBorrar = document.querySelector("#btnBorrar")
+
+    //Defino los nodos del DOM que me interesan
+    let domNombre = document.querySelector("#nombre")
+    let domBtnSaludar = document.querySelector("#btnSaludar")
+    let domBtnBorrar = document.querySelector("#btnBorrar")
+    let domOutput = document.querySelector("#output")
     
-    domNombre.addEventListener('input', leerDatos)
+    //Defino los manejadores de eventos de algunos nodos
     domBtnSaludar.addEventListener('click', saludar)
     domBtnBorrar.addEventListener('click', borrar)
     
+    domNombre.addEventListener('input', leerDatos)
+    // domNombre.addEventListener('change', detectarChange)
     
-    //domNombre.value = "Pepe"
-
     function leerDatos() {
-        console.log (domNombre.value)
+        let valorNombre = domNombre.value
+        console.log('valorNombre: ', valorNombre)
+        console.log('Input detectado')
+        domOutput.innerHTML = `Hola, <strong>${valorNombre}</strong>`
     }
+
+
+
+   /*  function detectarChange() {
+        let finalNombre = domNombre.value
+        console.log('finalNombre: ', finalNombre)
+        console.log('Change detectado')
+    } */
 
     function saludar() {
         console.log('Hola Amigo')
@@ -24,3 +38,4 @@ function app () {
 }
 
 document.addEventListener('DOMContentLoaded', app)
+
