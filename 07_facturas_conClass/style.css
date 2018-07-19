@@ -29,3 +29,7 @@ th {
     background-color: brown;
     color: bisque;
 }
+.precio {
+    text-align: end;
+    padding-right: 1rem;
+}

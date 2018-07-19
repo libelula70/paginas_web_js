@@ -23,8 +23,7 @@ function crearFactura1() {
     )
 
     factura1.elementos.push(
-        new Elemento (
-            'La Isla del Tesoro',30,10)
+        new Elemento ('La Isla del Tesoro', 30, 10)
     )
 
     factura1.elementos.push(
@@ -32,7 +31,7 @@ function crearFactura1() {
     )
 
     factura1.elementos.push(
-        new Elemento ('El Señor de loas Anillos', 50, 24)
+        new Elemento ('El Señor de los Anillos', 50, 24)
     )
 
     //factura1.mostrar()
