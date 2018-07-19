@@ -1,0 +1,31 @@
+.content-wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.datos {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    background-color: bisque;
+    min-height: 10vh;
+    padding: 1rem 3rem;
+}
+
+dt {
+    font-weight: 700;
+    text-decoration: underline;
+    color: brown;
+}
+
+table {
+    width: 100%;
+}
+th {
+    width: calc(100%/3);
+}
+.title {
+    background-color: brown;
+    color: bisque;
+}
