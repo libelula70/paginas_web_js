@@ -22,7 +22,7 @@ export class Factura {
     // muestre por pantalla el importe total 
     // de la factura en un formato HTML adecuado.
         this.calculaImporteTotal()
-        this.pintaDatos()
+        this.pintarDatos()
     }
     calculaImporteTotal () {
     // actualice el valor de la propiedad correspondiente
@@ -34,7 +34,7 @@ export class Factura {
             }
         )
     }
-    pintaDatos (oDatos = this) {
+    pintarDatos (oDatos = this) {
         for (const key in oDatos) {
             if ((typeof oDatos[key] !== 'function')) {
                 if (typeof oDatos[key] === 'object') { 
