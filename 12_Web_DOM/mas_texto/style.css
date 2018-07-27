@@ -1,0 +1,17 @@
+.h1 {
+    color: brown;
+}
+
+.ocultar {
+    display: none;
+}
+.mas {
+    border: 1px solid gainsboro;
+    background-color: darkslategray;
+    color: gainsboro;
+    cursor: pointer;
+    font-size: 1.3rem;
+    display: block;
+    width: 10rem;
+    text-align: center;
+}
