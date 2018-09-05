@@ -59,6 +59,7 @@ class App {
     }
 
     calcularOffsets() {
+        this.aOffset= []
         this.aSections.forEach (
             (section) => {
                 this.aOffset.push(section.offsetTop-60)
