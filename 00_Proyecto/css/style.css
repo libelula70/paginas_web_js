@@ -137,11 +137,16 @@ footer p {
 
 .btn-subir {
   position: fixed;
-  right: 4rem;
-  bottom: 4rem;
-  padding: 2rem;
-  opacity: 0.8;
-  background-color: darkgray;
+  right: 3rem;
+  bottom: 3rem;
+  padding: 1.5rem;
+  background-color: cadetblue;
+}
+
+button {
+  width: 4rem;
+  height: 2rem;
+  background-color: cadetblue;
 }
 
 .hide {
