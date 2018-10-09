@@ -10,7 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/libelula70/paginas_web_js.git"
   },
-  "keywords": ["JavaScript", "ECMAScript"],
+  "keywords": [
+    "JavaScript",
+    "ECMAScript"
+  ],
   "author": "Ana Belén",
   "license": "MIT",
   "bugs": {
