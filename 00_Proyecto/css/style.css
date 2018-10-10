@@ -143,9 +143,8 @@ footer p {
   background-color: cadetblue;
 }
 
-button {
-  width: 4rem;
-  height: 2rem;
+.btn-top {
+  font-size: 3rem;
   background-color: cadetblue;
 }
 

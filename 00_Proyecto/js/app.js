@@ -9,7 +9,6 @@ class App {
     }   
     
     scollDetect (oE) {
-        console.log (oE.target.scrollingElement.scrollTop)
         if (oE.target.scrollingElement.scrollTop > 200) {
             this.divSubir.classList.toggle ('hide')
         } 
