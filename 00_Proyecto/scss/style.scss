@@ -163,15 +163,22 @@ footer  {
     right: 3rem;
     bottom: 3rem;
     padding: 1.5rem;
-    background-color: cadetblue
 }
 
-.btn-top{
-    font-size: 3rem;
-    background-color: cadetblue;
+.fa-arrow-alt-circle-up {
+    font-size: 55px;
+    color: cadetblue;
 }
 
+.fa-chevron-circle-down {
+    font-size: 40px;
+    color: cadetblue
+}
 .hide {
+    display: none;
+}
+
+p.hide {
     display: none;
 }
 

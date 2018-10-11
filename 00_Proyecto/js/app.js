@@ -9,9 +9,11 @@ class App {
     }   
     
     scollDetect (oE) {
-        if (oE.target.scrollingElement.scrollTop > 200) {
-            this.divSubir.classList.toggle ('hide')
-        } 
+        if (oE.target.scrollingElement.scrollTop > 500) {
+            this.divSubir.classList.remove ('hide')
+        } else {
+            this.divSubir.classList.add ('hide')
+        }
     }  
 
     subir(oE) {
