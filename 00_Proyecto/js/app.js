@@ -1,21 +1,31 @@
 class App {
 
     constructor () {
-        this.btnSubir = document.querySelector('#btn-subir')
+
+        this.btnSubir = document.querySelector('#btn-subir').addEventListener('click', this.subir.bind(this))
         this.divSubir = document.querySelector('#div-subir')
-    
-        document.addEventListener('scroll', this.scollDetect.bind(this) )
-        this.btnSubir.addEventListener('click', this.subir.bind(this))
-    }   
-    
-    scollDetect (oE) {
-        if (oE.target.scrollingElement.scrollTop > 500) {
+        this.btnMasTexto = document.querySelectorAll('.fa-chevron-circle-down')
+        this.textoMas = document.querySelectorAll('.mas-texto')
+        this.btnBurguer = document.querySelector ('#btnBurguer')
+        this.menuBurguer = document.querySelector ('div.burguer-content')
+
+        document.addEventListener('scroll', this.scrollDetect.bind(this))
+
+        this.btnMasTexto.forEach(
+            (btn) => {btn.addEventListener ('click', this.mostrar.bind(this))}
+        )
+
+        this.btnBurguer.addEventListener ('click', this.mostrarMenu.bind(this))
+
+    }
+//Detectar scroll y boton para subir al principio   
+    scrollDetect (oE) {
+        if (oE.target.scrollingElement.scrollTop > 200) {
             this.divSubir.classList.remove ('hide')
         } else {
             this.divSubir.classList.add ('hide')
         }
     }  
-
     subir(oE) {
         window.scroll({
             top: 0,
@@ -23,6 +33,29 @@ class App {
             behavior: 'smooth'
         })
     }
-}
+//Hasta aquí detectar scroll y botón para subir
 
+//Botón más texto
+   mostrar (oE) {
+        let btnDown = oE.target
+        let btnUp = btnDown.nextElementSibling
+        let nodoTxt = btnDown.previousElementSibling
+        nodoTxt.classList.toggle('mas-texto')
+    /*     if (nodoTxt.className='mas-texto') {
+            btnUp
+        } else {btnDown}  
+     */}
+//Hasta aquí más texto
+
+//Mostrar menú burguer
+     mostrarMenu(oE) {
+        if (oE.isTrusted =='true') {
+            console.log(oE)
+            this.menuBurguer.style.display='none'
+        } else {this.menuBurguer.style.display='inherit'}
+        
+     }
+
+
+}
 document.addEventListener('DOMContentLoaded', () => new App())

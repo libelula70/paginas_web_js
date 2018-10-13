@@ -64,10 +64,32 @@ div.wrapper-flex {
     border-bottom: 2px solid $borde;
 
     nav.burguer {
-        a {
+        position: relative;
+        i {
+            cursor: pointer;
             padding-top: .5rem;
             font-weight: 700;
             font-size: 2.5rem;
+        }
+        div.burguer-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            overflow: auto;
+            border: 2px solid $borde;
+            right: 0;
+            z-index: 1;
+            li {
+                text-align: center;
+                a {
+                    display: block;
+                    padding: 0.5rem 0.8rem;
+                    font-size: 1rem;
+                    font-weight: 700;
+                }
+            }
+            
         }
     }
     h1 {
@@ -168,18 +190,23 @@ footer  {
 .fa-arrow-alt-circle-up {
     font-size: 55px;
     color: cadetblue;
+    cursor: pointer;
 }
 
 .fa-chevron-circle-down {
     font-size: 40px;
-    color: cadetblue
+    color: cadetblue;
+    cursor: pointer;
 }
 .hide {
     display: none;
 }
 
-p.hide {
+p.mas-texto {
     display: none;
+}
+.fa-chevron-circle-up {
+    display:none
 }
 
 @media screen and (min-width:620px) {

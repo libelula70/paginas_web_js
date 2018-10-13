@@ -48,10 +48,33 @@ div.wrapper-flex {
   justify-content: space-between;
   border-bottom: 2px solid olive;
 }
-div.wrapper-flex nav.burguer a {
+div.wrapper-flex nav.burguer {
+  position: relative;
+}
+div.wrapper-flex nav.burguer i {
+  cursor: pointer;
   padding-top: 0.5rem;
   font-weight: 700;
   font-size: 2.5rem;
+}
+div.wrapper-flex nav.burguer div.burguer-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  border: 2px solid olive;
+  right: 0;
+  z-index: 1;
+}
+div.wrapper-flex nav.burguer div.burguer-content li {
+  text-align: center;
+}
+div.wrapper-flex nav.burguer div.burguer-content li a {
+  display: block;
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+  font-weight: 700;
 }
 div.wrapper-flex h1 {
   text-align: left;
@@ -145,18 +168,24 @@ footer p {
 .fa-arrow-alt-circle-up {
   font-size: 55px;
   color: cadetblue;
+  cursor: pointer;
 }
 
 .fa-chevron-circle-down {
   font-size: 40px;
   color: cadetblue;
+  cursor: pointer;
 }
 
 .hide {
   display: none;
 }
 
-p.hide {
+p.mas-texto {
+  display: none;
+}
+
+.fa-chevron-circle-up {
   display: none;
 }
 

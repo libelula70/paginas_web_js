@@ -3,7 +3,7 @@ class Apps{
         this.amigo = 'Pepe'
         this.isSaludar = true
         this.oBtn = document.querySelector('#btnDual')
-        this.oOutput = documento.querySelector('#saludo')
+        this.oOutput = document.querySelector('#saludo')
         this.asignarHandlers()
     }
 
@@ -49,6 +49,5 @@ class Apps{
 
 
 
-document.addEventListener('DOMContentLoaded', 
-        () =>  new Apps() )
+document.addEventListener('DOMContentLoaded', () =>  new Apps())
 
