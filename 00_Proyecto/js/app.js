@@ -4,7 +4,7 @@ class App {
 
         this.btnSubir = document.querySelector('#btn-subir').addEventListener('click', this.subir.bind(this))
         this.divSubir = document.querySelector('#div-subir')
-        this.btnMasTexto = document.querySelectorAll('.fa-chevron-circle-down')
+        this.btnMasTexto = document.querySelectorAll('a.mas-texto')
         this.textoMas = document.querySelectorAll('.mas-texto')
         this.btnBurguer = document.querySelector ('#btnBurguer')
         this.menuBurguer = document.querySelector ('div.burguer-content')
@@ -37,25 +37,39 @@ class App {
 
 //Botón más texto
    mostrar (oE) {
-        let btnDown = oE.target
-        let btnUp = btnDown.nextElementSibling
-        let nodoTxt = btnDown.previousElementSibling
+        let nodoBtn = oE.target
+        let nodoTxt = nodoBtn.previousElementSibling
         nodoTxt.classList.toggle('mas-texto')
-    /*     if (nodoTxt.className='mas-texto') {
-            btnUp
-        } else {btnDown}  
-     */}
+        if (nodoTxt.classList.contains ('mas-texto')) {
+            nodoBtn.textContent = 'Ver más'
+        } else {nodoBtn.textContent = 'Ver menos'}  
+    }
 //Hasta aquí más texto
 
 //Mostrar menú burguer
      mostrarMenu(oE) {
-        if (oE.isTrusted =='true') {
+        this.menuBurguer.style.display='inherit'
+
+        /* if (oE.isTrusted !='true') {
             console.log(oE)
-            this.menuBurguer.style.display='none'
-        } else {this.menuBurguer.style.display='inherit'}
+        } */    
+            
+            
         
-     }
-
-
+    }
 }
 document.addEventListener('DOMContentLoaded', () => new App())
+
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+  
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }

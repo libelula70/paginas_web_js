@@ -188,8 +188,7 @@
                     unificado puesto que Teodosio I el Grande lo dividió entre sus dos hijos, Arcadio y Flavio Honorio, adjudicándoles
                     a uno el Imperio romano de Oriente —con sede en Constantinopla— y al otro el Imperio romano de Occidente.
                     Las invasiones bárbaras pondrán fin al Imperio Occidental en 476, dando paso a la Edad Media.</p>
-                    <i class="fas fa-chevron-circle-down"></i>
-                    <i class="fas fa-chevron-circle-up"></i>
+                    <a class="mas-texto">Ver más</a>
 
             </article>
             <article>
@@ -227,8 +226,7 @@
                     tenían fundagos, "cónsules de las nationes", que vigilaban los intereses comerciales de sus respectivas
                     ciudades en los puertos mediterráneos, y pueden ser incluidas de pleno derecho entre las repúblicas marítimas.
                     Entre estas, cabría destacar Gaeta, Ancona, y Noli.</p>
-                <i class="fas fa-chevron-circle-down"></i>
-                <i class="fas fa-chevron-circle-up"></i>
+                    <a class="mas-texto">Ver más</a>
 
             </article>
             <nav>
@@ -274,6 +272,39 @@
     </main>
 
    
+
+    <form action="">
+        <p>Si quieres más información, envíame este formulario</p>
+        <fieldset>
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" required class="form-control val" name="nombre" id="nombre" aria-describedby="helpId"
+                    placeholder="">
+                <small id="helpId" class="form-text text-muted hide"></small>
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido</label>
+                <input type="text" required class="form-control val" name="apellido" id="apellido" aria-describedby="helpId"
+                    placeholder="">
+                <small id="helpId" class="form-text text-muted hide"></small>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="form-group">
+                <label for="correo">Correo</label>
+                <input type="email" required class="form-control val" name="correo" id="correo" aria-describedby="emailHelpId"
+                    placeholder="">
+                <small id="emailHelpId" class="form-text text-muted hide"></small>
+            </div>
+            <div class="form-group">
+                <label for="">Telefono</label>
+                <input type="tel" placeholder="34-xxx-xxx-xxx" pattern="^(\+34|0034|34)?-[16|7|9][0-9]{8}$" class="form-control val"
+                    name="telefono" id="telefono" aria-describedby="helpId" placeholder="">
+                <small id="helpId" class="form-text text-muted hide"></small>
+            </div>
+        </fieldset>
+        <button type="submit" id="enviar" class="btn btn-primary">Enviar</button>
+    </form>
 
     <footer>
         <nav id="menu-footer" class="menu-footer">

@@ -142,11 +142,8 @@ h2 {
 }
 h3 {
     font-size: 1.1rem;
-    padding: .3rem;
-    width: max-content;
     font-family: $font_titulos;
-    color: $color_titulos;
-    background-color: $borde;
+    color: $borde;
     }
 
 
@@ -193,10 +190,14 @@ footer  {
     cursor: pointer;
 }
 
-.fa-chevron-circle-down {
-    font-size: 40px;
-    color: cadetblue;
+a.mas-texto {
     cursor: pointer;
+    padding: 0.6rem 1rem;
+    background-color: cadetblue;
+    font-weight: 700;
+    text-align: center;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
 }
 .hide {
     display: none;
@@ -205,8 +206,13 @@ footer  {
 p.mas-texto {
     display: none;
 }
-.fa-chevron-circle-up {
-    display:none
+
+form {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid $borde;
+    padding: 2%;
 }
 
 @media screen and (min-width:620px) {
