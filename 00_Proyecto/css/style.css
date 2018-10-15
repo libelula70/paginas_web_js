@@ -58,7 +58,6 @@ div.wrapper-flex nav.burguer i {
   font-size: 2.5rem;
 }
 div.wrapper-flex nav.burguer div.burguer-content {
-  display: none;
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;

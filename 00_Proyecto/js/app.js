@@ -48,28 +48,8 @@ class App {
 
 //Mostrar menú burguer
      mostrarMenu(oE) {
-        this.menuBurguer.style.display='inherit'
-
-        /* if (oE.isTrusted !='true') {
-            console.log(oE)
-        } */    
-            
-            
-        
+        this.menuBurguer.classList.toggle('hide')
     }
 }
 document.addEventListener('DOMContentLoaded', () => new App())
 
-window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-  
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
