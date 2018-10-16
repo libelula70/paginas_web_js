@@ -8,11 +8,15 @@ class App {
         this.textoMas = document.querySelectorAll('.mas-texto')
         this.btnBurguer = document.querySelector ('#btnBurguer')
         this.menuBurguer = document.querySelector ('div.burguer-content')
+        this.aNodosMenu = document.querySelectorAll('.movil')
 
         document.addEventListener('scroll', this.scrollDetect.bind(this))
 
         this.btnMasTexto.forEach(
             (btn) => {btn.addEventListener ('click', this.mostrar.bind(this))}
+        )
+        this.aNodosMenu.forEach(
+            (item) => {item.addEventListener('click', this.ocultarMenu.bind(this))}
         )
 
         this.btnBurguer.addEventListener ('click', this.mostrarMenu.bind(this))
@@ -47,8 +51,11 @@ class App {
 //Hasta aquí más texto
 
 //Mostrar menú burguer
-     mostrarMenu(oE) {
+     mostrarMenu() {
         this.menuBurguer.classList.toggle('hide')
+    }
+    ocultarMenu(item) {
+        this.menuBurguer.classList.add ('hide')
     }
 }
 document.addEventListener('DOMContentLoaded', () => new App())
